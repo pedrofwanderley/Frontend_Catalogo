@@ -11,7 +11,7 @@ myApp.controller('catalogoController', ['$scope', '$http', function($scope, $htt
         obj.setor = $scope.setor;
 
         $http({
-            url: '',
+            url: 'http://localhost:8080/catalogo/itens',
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             data: { "codigo": obj.codigo,
