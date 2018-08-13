@@ -20,7 +20,7 @@ myApp.controller('catalogoController', ['$scope', '$http', function($scope, $htt
             "armazenamento": obj.armazenamento,
             "categoria":obj.categoria,
             "setor":obj.setor 
-                }
+            }
                
            
         })
