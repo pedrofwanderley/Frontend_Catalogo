@@ -34,6 +34,8 @@ myApp.controller('catalogoController', ['$scope', '$http', function($scope, $htt
       
       }
       $scope.catalogo = [];
+      $scope.ferramentas = [];
+      $scope.equipamentos = [];
     
       $scope.getCatalogo = function(){
           $http.get("https://calm-retreat-97213.herokuapp.com/catalogo/itens")
@@ -41,7 +43,15 @@ myApp.controller('catalogoController', ['$scope', '$http', function($scope, $htt
               for (let index = 0; index < response.data.length; index++) {
                   const element = response.data[index];
                       $scope.catalogo[index] = element;
-                  
+                      /*
+                      if (element.codigo.indexOf("FE") > -1) {
+                          $scope.ferramentas[index] = element;
+                          
+                      }
+                      else if(element.codigo.indexOf("EQ") > -1){
+                          $scope.equipamentos[index] = element;
+                      }
+                  */
                   
               };
               
