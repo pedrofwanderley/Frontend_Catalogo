@@ -19,13 +19,21 @@
   <div>
     <input type="button" ng-click="getCatalogo()" value="Visualizar Catálogo"/>
   </div>
+
   
   
   <div ng-repeat="item in catalogo track by $index">
     
-        <p> {{item.codigo}} - {{item.produto}} - {{item.data}} - {{item.armazenamento}} - {{item.categoria}} - {{item.setor}} </p>
+        <p> |código: {{item.codigo}} | - |produto: {{item.produto}} | - |data: {{item.data}} | - |armazenamento: {{item.armazenamento}} | - |categoria: {{item.categoria}} | - |setor: {{item.setor}} | </p>
        
    </div>
+
+   <div>
+    <button type="button" onclick="window.location.href='index.html';" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> adicionar </button>
+</div>
+<div>
+  <button type="button" onclick="window.location.href='delete.html';" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> deletar </button>
+</div>
 
  
    
